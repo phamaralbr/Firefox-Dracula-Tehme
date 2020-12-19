@@ -1,46 +1,34 @@
 /*================ GLOBAL COLORS ================*/
-/* :root {
-	--night_color1: #2E3440;
-	--night_color2: #3B4252;
-	--night_color3: #434C5E;
-	--night_color4: #4C566A;
-	
-	--snow_color1: #D8DEE9;
-	--snow_color2: #E5E9F0;
-	--snow_color3: #ECEFF4;
-	
-	--frost_color1: #8FBCBB;
-	--frost_color2: #88C0D0;
-	--frost_color3: #81A1C1;
-	--frost_color4: #5E81AC;
-	
-	--aurora_color1: #BF616A;
-	--aurora_color2: #D08770;
-	--aurora_color3: #EBCB8B;
-	--aurora_color4: #A3BE8C;
-	--aurora_color5: #B48EAD;
-} */
-
 :root {
   --night_color1: #191a21; /* Background */
   --night_color2: #21222c; /* URL bar and unselected tab */
-  --night_color3: #434c5e;
-  --night_color4: #282a36; /* Selected tab */
+  --night_color3: #313341; /* Hover on tab */
+  --night_color4: #6273a43a; /* Selected tab */
 
   --snow_color1: #bb76b7; /* Text on URL dropdown */
-  --snow_color2: #005eff;
-  --snow_color3: #aa5084; /* Selected tab text */
+  --snow_color3: #7d9bf7; /* Selected tab text */
 
-  --frost_color1: #00fffb;
-  --frost_color2: #ea00ff;
   --frost_color3: #6272a4; /* Text and icons */
-  --frost_color4: #7700ff;
 
-  --aurora_color1: #ff79c6;
-  --aurora_color2: #d08770;
-  --aurora_color3: #8be9fd;
-  --aurora_color4: #50fa78;
-  --aurora_color5: #b48ead;
+  /* Popup panels */
+  --arrowpanel-background: #191a21 !important;
+  --arrowpanel-border-color: #21222c !important;
+  --arrowpanel-color: #7d9bf7 !important;
+  --arrowpanel-dimmed: rgba(0, 0, 0, 0.4) !important;
+
+  /* Context Menu */
+  --uc-menu-bkgnd: #191a21;
+  --uc-menu-color: #7d9bf7;
+  --uc-menu-dimmed: rgba(68, 75, 99, 0.1);
+  --uc-menu-disabled: rgba(68, 75, 99, 0.5);
+
+  --uc-menu-separator: rgba(68, 75, 99, 0.1);
+  --uc-menu-border: rgba(68, 75, 99, 0.1);
+  --arrowpanel-background: rgb(29, 29, 36) !important;
+  --arrowpanel-dimmed: rgba(68, 75, 99, 0.1) !important;
+  --arrowpanel-dimmed-further: rgba(68, 75, 99, 0.15) !important;
+  --arrowpanel-dimmed-even-further: rgba(68, 75, 99, 0.2) !important;
+  --arrowpanel-border-color: rgba(68, 75, 99, 0.5) !important;
 }
 
 @media (prefers-color-scheme: dark) {
