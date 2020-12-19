@@ -8,24 +8,33 @@ ENJOY!
 :root {
   --night_color1: #191a21; /* Background */
   --night_color2: #21222c; /* URL bar and unselected tab */
-  --night_color3: #2e313e; /* Hover on tab */
-  --night_color4: #282a36; /* Selected tab */
+  --night_color3: #313341; /* Hover on tab */
+  --night_color4: #6273a43a; /* Selected tab */
 
   --snow_color1: #bb76b7; /* Text on URL dropdown */
-  --snow_color3: #7892df; /* Selected tab text */
+  --snow_color3: #7d9bf7; /* Selected tab text */
 
   --frost_color3: #6272a4; /* Text and icons */
 
   /* Popup panels */
   --arrowpanel-background: #191a21 !important;
   --arrowpanel-border-color: #21222c !important;
-  --arrowpanel-color: #6272a4 !important;
+  --arrowpanel-color: #7d9bf7 !important;
   --arrowpanel-dimmed: rgba(0, 0, 0, 0.4) !important;
 
+  /* Context Menu */
   --uc-menu-bkgnd: #191a21;
-  --uc-menu-color: #7a8cc4;
-  --uc-menu-dimmed: #2e313e;
-  --uc-menu-disabled: #444b63;
+  --uc-menu-color: #7d9bf7;
+  --uc-menu-dimmed: rgba(68, 75, 99, 0.1);
+  --uc-menu-disabled: rgba(68, 75, 99, 0.5);
+
+  --uc-menu-separator: rgba(68, 75, 99, 0.1);
+  --uc-menu-border: rgba(68, 75, 99, 0.1);
+  --arrowpanel-background: rgb(29, 29, 36) !important;
+  --arrowpanel-dimmed: rgba(68, 75, 99, 0.1) !important;
+  --arrowpanel-dimmed-further: rgba(68, 75, 99, 0.15) !important;
+  --arrowpanel-dimmed-even-further: rgba(68, 75, 99, 0.2) !important;
+  --arrowpanel-border-color: rgba(68, 75, 99, 0.5) !important;
 }
 
 /*================ LIGHT THEME ================*/
@@ -357,7 +366,7 @@ toolbar .toolbarbutton-1:not([disabled="true"]):-moz-any([open], [checked], :hov
 */
 
 /* CONTEXT MENU STYLE */
-panel richlistbox,
+/* panel richlistbox,
 panel tree,
 panel button,
 panel menulist,
@@ -440,4 +449,188 @@ menuitem[disabled="true"] {
 
 menu:not(.subviewbutton) > .menu-right {
   filter: invert(1);
+} */
+
+/* Dark context menus */
+
+.subviewbutton.panel-subview-footer,
+.panel-footer {
+  background: var(--arrowpanel-background) !important;
+  border-radius: 4px;
+}
+
+menuitem.panel-subview-footer:not(:is([disabled], :active))[_moz-menuactive],
+.subviewbutton.panel-subview-footer:not(:is([disabled], [open], :active)):is(:hover, :focus) {
+  background: var(--arrowpanel-dimmed) !important;
+}
+
+menuitem.panel-subview-footer:not([disabled])[_moz-menuactive]:active,
+.subviewbutton.panel-subview-footer:not([disabled]):is([open], :hover:active) {
+  background: var(--arrowpanel-dimmed-further) !important;
+  box-shadow: none !important;
+}
+
+menupopup,
+menu,
+menuitem,
+menucaption {
+  -moz-appearance: none !important;
+  border-radius: 4px;
+}
+
+menu,
+menuitem,
+menucaption {
+  min-height: 1.8em;
+}
+
+.bookmark-item,
+.menu-iconic,
+.menuitem-iconic {
+  max-height: 24px !important;
+  line-height: 16px !important;
+  border: none !important;
+}
+
+.menu-accel,
+.menu-iconic-accel,
+.menu-text,
+.menu-iconic-text,
+.menu-iconic-highlightable-text {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+#context-navigation .menuitem-iconic {
+  max-height: none !important;
+}
+
+menupopup:not(.PanelUI-subView),
+#main-menubar > menu > menupopup,
+#context-navigation,
+menucaption {
+  color: var(--uc-menu-color) !important;
+  background: var(--uc-menu-bkgnd) !important;
+  border-color: var(--uc-menu-border) !important;
+  border-radius: 4px;
+}
+
+.menu-iconic-left,
+.menu-iconic-text,
+.menu-iconic-highlightable-text {
+  color: var(--uc-menu-color) !important;
+}
+
+menu:hover:not(.panel-subview-footer),
+menu[_moz-menuactive]:not(.panel-subview-footer),
+menu[open]:not(.panel-subview-footer),
+menuitem:hover:not(.panel-subview-footer),
+menuitem[_moz-menuactive]:not(.panel-subview-footer) {
+  background-color: var(--uc-menu-dimmed) !important;
+  color: inherit !important;
+}
+
+menu:not(.subviewbutton) > .menu-right {
+  filter: invert(1);
+}
+
+menu:not(.subviewbutton)[disabled="true"] > .menu-right {
+  filter: none;
+  color: var(--uc-menu-disabled) !important;
+}
+
+.menu-iconic-left[disabled="true"],
+.menu-iconic-text[disabled="true"],
+.menu-iconic-highlightable-text[disabled="true"],
+.bookmark-item[disabled="true"],
+.menu-iconic[disabled="true"],
+.menuitem-iconic[disabled="true"],
+menu[disabled="true"],
+menuitem[disabled="true"],
+menucaption[disabled="true"],
+.menu-iconic-left[disabled="true"][_moz-menuactive],
+.menu-iconic-text[disabled="true"][_moz-menuactive],
+.bookmark-item[disabled="true"][_moz-menuactive],
+.menu-iconic[disabled="true"][_moz-menuactive],
+.menuitem-iconic[disabled="true"][_moz-menuactive],
+menu[disabled="true"][_moz-menuactive],
+menucaption[disabled="true"][_moz-menuactive],
+menuitem[disabled="true"][_moz-menuactive] {
+  color: var(--uc-menu-disabled) !important;
+}
+
+menupopup:not(.PanelUI-subView) {
+  padding: 4px 0px !important;
+}
+
+menupopup menuitem:not(.subviewbutton),
+menupopup menu:not(.subviewbutton),
+#contentAreaContextMenu menuitem,
+#contentAreaContextMenu menu {
+  padding: 4px 8px !important;
+}
+
+#context-navigation {
+  padding: 0px !important;
+}
+
+#BMB_bookmarksPopup menupopup[placespopup="true"] {
+  background: transparent !important;
+}
+
+menuseparator:not(.PanelUI-subView) {
+  -moz-appearance: none !important;
+  margin: 4px 10px !important;
+  height: 1px !important;
+  border: none !important;
+  background: var(--uc-menu-separator) !important;
+  padding: 0 !important;
+}
+
+treechildren::-moz-tree-separator {
+  border-color: var(--uc-menu-separator) !important;
+  border-bottom: none !important;
+}
+
+.PanelUI-subView menuseparator,
+#context-sep-navigation {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.PanelUI-subView menuseparator.small-separator {
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+}
+
+.panel-subview-body {
+  padding: 4px 0 !important;
+}
+
+#widget-overflow-mainView > .panel-subview-body > toolbarseparator,
+.PanelUI-subView menuseparator,
+.PanelUI-subView toolbarseparator,
+.cui-widget-panelview menuseparator,
+.cui-widget-panel toolbarseparator {
+  margin: 4px 0 !important;
+}
+
+.PanelUI-subView toolbarseparator[orient="vertical"] {
+  margin-inline-start: 6px !important;
+  margin-inline-end: 7px !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+toolbaritem#appMenu-fxa-container.toolbaritem-combined-buttons {
+  margin-inline-end: 0px !important;
+}
+
+.customization-uidensity-menuitem {
+  max-height: none !important;
+}
+
+toolbarbutton.subviewbutton.highlight.subviewbutton-iconic.bookmark-item {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
