@@ -25,7 +25,7 @@ ENJOY!
   /* Context Menu */
   --uc-menu-bkgnd: #191a21;
   --uc-menu-color: #7d9bf7;
-  --uc-menu-dimmed: rgba(68, 75, 99, 0.1);
+  --uc-menu-dimmed: #313341;
   --uc-menu-disabled: rgba(68, 75, 99, 0.5);
 
   --uc-menu-separator: rgba(68, 75, 99, 0.1);
@@ -92,7 +92,8 @@ tab[selected="true"] .tab-content {
   color: var(--snow_color3) !important;
 }
 tab[selected="true"] .tab-background {
-  background: var(--night_color4) !important;
+  background: #6273a452 !important;
+  /* border: 1px solid #6273a483 !important; */
 }
 
 .tabbrowser-tab::after,
