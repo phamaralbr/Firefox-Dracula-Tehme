@@ -7,9 +7,9 @@ ENJOY!
 
 :root {
   --night_color1: #191a21; /* Background */
-  --night_color2: #21222c; /* URL bar and unselected tab */
+  --night_color2: #252631; /* URL bar and unselected tab */
   --night_color3: #313341; /* Hover on tab */
-  --night_color4: #6273a43a; /* Selected tab */
+  --night_color4: #6273a448; /* Selected tab */
 
   --snow_color1: #bb76b7; /* Text on URL dropdown */
   --snow_color3: #7d9bf7; /* Selected tab text */
@@ -30,8 +30,8 @@ ENJOY!
 
   --uc-menu-separator: rgba(68, 75, 99, 0.1);
   --uc-menu-border: rgba(68, 75, 99, 0.1);
-  --arrowpanel-background: rgb(29, 29, 36) !important;
-  --arrowpanel-dimmed: rgba(68, 75, 99, 0.1) !important;
+  --arrowpanel-background: #191a21 !important;
+  --arrowpanel-dimmed: #313341 !important;
   --arrowpanel-dimmed-further: rgba(68, 75, 99, 0.15) !important;
   --arrowpanel-dimmed-even-further: rgba(68, 75, 99, 0.2) !important;
   --arrowpanel-border-color: rgba(68, 75, 99, 0.5) !important;
