@@ -19,7 +19,7 @@
   /* Context Menu */
   --uc-menu-bkgnd: #191a21;
   --uc-menu-color: #7d9bf7;
-  --uc-menu-dimmed: rgba(68, 75, 99, 0.1);
+  --uc-menu-dimmed: #313341;
   --uc-menu-disabled: rgba(68, 75, 99, 0.5);
 
   --uc-menu-separator: rgba(68, 75, 99, 0.1);
